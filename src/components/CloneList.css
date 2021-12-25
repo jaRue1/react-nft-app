@@ -1,0 +1,12 @@
+.cloneList {
+  cursor: pointer;
+  display: flex;
+  overflow: scroll;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+.cloneList ::-webkit-scrollbar {
+  display: none !important;
+}
