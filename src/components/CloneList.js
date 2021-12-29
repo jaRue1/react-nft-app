@@ -7,7 +7,6 @@ function CloneList({cloneListData, setSelectedNft}) {
       {cloneListData.map(clone => (
         <div onClick={() => setSelectedNft(clone.token_id)}>
          <CollectionCard
-         key={clone.token_id}
          id={clone.token_id}
          name={clone.name}
          traits={clone.traits}

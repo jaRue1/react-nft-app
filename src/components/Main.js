@@ -1,5 +1,4 @@
 import React from "react"
-import ownerImage from "../assets/blue-cover-2.png"
 import TwitterIcon from "@material-ui/icons/Twitter"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz"
@@ -37,7 +36,7 @@ function Main({ selectedNft, cloneListData }) {
             <div className="ownerDetails">
               <div className="ownerNameAndHandle">
                 <div className="ownerAddress">{activeNft.owner.address}</div>
-                <div className="ownerHandle">@unkwn</div>
+                <div className="ownerHandle">{!activeNft.owner.user ? <p>@notFound</p>:<p>@unkwn</p>}</div>
               </div>
 
               <div className="ownerLink">
