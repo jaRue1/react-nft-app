@@ -8,7 +8,13 @@ import Main from "./components/Main"
 function App() {
   const [cloneListData, setCloneListData] = useState([])
   const [selectedNft, setSelectedNft] = useState([0])
-  const [error, setError] = useState(null)
+  // new useEffect ?
+  // useEffect( () => {
+  //   fetch('cloud function url')
+  //   .then(response => response.json())
+  //   .then(data => cloneListData(data))
+  //   .catch(error => console.error(error))
+  // },[])
   useEffect(() => {
     const getMyNfts = async () => {
       const openSeaData = await axios.get(
@@ -16,7 +22,6 @@ function App() {
       )
       // https://testnets-api.opensea.io/assets?order_direction=asc&asset_contract_address=newCollectionAddress
       // console.log(openSeaData.data.assets)
-      console.log(cloneListData)
       setCloneListData(openSeaData.data.assets)
     }
     return getMyNfts()
